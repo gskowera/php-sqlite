@@ -1,0 +1,12 @@
+services:
+  php-apache:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
+      - ./sqlite:/sqlite
+
+volumes:
+  app:
+  sqlite:
